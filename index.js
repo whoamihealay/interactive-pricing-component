@@ -11,27 +11,27 @@ let percentage = 1;
 const switcher = (discount) => {
   switch (slider.value) {
     case "1":
-      money = 8 * discount;
+      money = (8 * discount).toFixed(2);
       document.getElementById("slider-views").innerHTML = "10K";
       document.getElementById("slider-money").innerHTML = `$${money}`;
       break;
     case "2":
-      money = 12 * discount;
+      money = (12 * discount).toFixed(2);
       document.getElementById("slider-views").innerHTML = "50K";
       document.getElementById("slider-money").innerHTML = `$${money}`;
       break;
     case "3":
-      money = 16 * discount;
+      money = (16 * discount).toFixed(2);
       document.getElementById("slider-views").innerHTML = "100K";
       document.getElementById("slider-money").innerHTML = `$${money}`;
       break;
     case "4":
-      money = 24 * discount;
+      money = (24 * discount).toFixed(2);
       document.getElementById("slider-views").innerHTML = "500K";
       document.getElementById("slider-money").innerHTML = `$${money}`;
       break;
     case "5":
-      money = 36 * discount;
+      money = (36 * discount).toFixed(2);
       document.getElementById("slider-views").innerHTML = "1M";
       document.getElementById("slider-money").innerHTML = `$${money}`;
       break;

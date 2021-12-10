@@ -1,19 +1,33 @@
 /* Description */
 
-.card ul {
-  padding: 1em 0;
+.div-cta {
+  ul {
+    padding: 1em 0;
+    li {
+      list-style: url("../images/icon-check.svg") inside;
+    }
+  }
+  .cta {
+    background-color: $clr-text-cta-bg;
+    color: $clr-cta-text;
+    font-weight: 800;
+    border-radius: 1.5rem;
+    padding: 0.5em 3em;
+    margin: 1em 1em 2em 1em;
+    cursor: pointer;
+  }
+  .cta:hover {
+    filter: brightness(150%);
+  }
+  .cta:active {
+    transform: scale(0.98);
+  }
 }
 
-.card li {
-  list-style: url("../images/icon-check.svg") inside;
-}
-
-.cta {
-  background-color: $clr-text-cta-bg;
-  color: $clr-cta-text;
-  font-weight: 800;
-  border-radius: 1.5rem;
-  padding: 0.5em 3em;
-  margin: 1em;
-  cursor: pointer;
+@media screen and (min-width: 48rem) {
+  .div-cta {
+    display: flex;
+    justify-content: space-around;
+    margin: 1em;
+  }
 }

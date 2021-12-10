@@ -10,13 +10,19 @@
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 1440px) {
+  .container {
+    background-size: contain;
+  }
+}
+
 /* ############ */
 /*      MAIN    */
 /* ############ */
 
 .card {
   background-color: $clr-price-comp-bg;
-  width: 100%;
+  width: 90%;
   border-radius: $border-rad;
   text-align: center;
   min-width: 330px;
@@ -24,6 +30,13 @@
 
 hr {
   opacity: 0.1;
+}
+
+@media screen and (min-width: 48rem) {
+  .card {
+    text-align: left;
+    max-width: 80%;
+  }
 }
 
 /* ############ */

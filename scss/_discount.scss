@@ -6,29 +6,26 @@
   gap: 0.5em;
   align-items: center;
   padding: 1em 0.8em;
-}
-
-.div-discount p {
-  font-size: 0.875rem;
-}
-
-.p-discount span {
-  display: none;
-}
-
-.div-yearly {
-  position: relative;
-}
-
-.p-discount {
-  position: absolute;
-  bottom: 0;
-  right: -50%;
-  background-color: $clr-discount-bg;
-  color: $clr-discount-text;
-  font-size: 0.625rem;
-  padding: 0.125rem 0.8em;
-  border-radius: 0.5rem;
+  margin-bottom: 1em;
+  p {
+    font-size: 0.875rem;
+  }
+  .div-yearly {
+    position: relative;
+    .p-discount {
+      position: absolute;
+      bottom: 0;
+      right: -50%;
+      background-color: $clr-discount-bg;
+      color: $clr-discount-text;
+      font-size: 0.625rem;
+      padding: 0.125rem 0.8em;
+      border-radius: 0.5rem;
+      span {
+        display: none;
+      }
+    }
+  }
 }
 
 /* Discount toggle button */
@@ -71,6 +68,10 @@
       border-radius: 50%;
     }
   }
+  input:checked + .circle {
+    background-color: $clr-slider-bg;
+  }
+
   input:checked + .circle:before {
     -webkit-transform: translateX(1.4rem);
     -ms-transform: translateX(1.4rem);

@@ -30,8 +30,9 @@
     </header>
     <main class="card">
       <div class="div-slider">
-        <label for="slider"><span id="slider-views"></span> Pageviews</label
-        ><br />
+        <label id="slider-label" for="slider"
+          ><span id="slider-views"></span> Pageviews</label
+        >
         <input
           type="range"
           name="slider"
@@ -40,7 +41,7 @@
           min="1"
           max="5"
         />
-        <p><span id="slider-money"></span> /month</p>
+        <p id="slider-p"><span id="slider-money"></span> /month</p>
       </div>
       <div class="div-discount">
         <p>Monthly Billing</p>
@@ -54,12 +55,14 @@
         </div>
       </div>
       <hr />
-      <ul>
-        <li>Unlimited websites</li>
-        <li>100% data ownership</li>
-        <li>Email reports</li>
-      </ul>
-      <button class="cta">Start my trial</button>
+      <div class="div-cta">
+        <ul>
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <button class="cta">Start my trial</button>
+      </div>
     </main>
     <footer class="attribution">
       Challenge by

@@ -1,6 +1,50 @@
 /* Slider */
 
-.div-slider,
-.div-slider > * {
-  padding: 0.5em;
+.div-slider {
+  padding: 1em;
+
+  & > * {
+    margin: 0.5em 0;
+  }
+
+  label {
+    text-transform: uppercase;
+    font-size: $fs-200;
+    font-weight: 800;
+  }
+  .slider {
+    padding: 0.5rem;
+  }
+
+  #slider-money {
+    font-size: $fs-800;
+    font-weight: 800;
+    color: $clr-text-cta-bg;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .div-slider {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template:
+      "a b"
+      "c c";
+    padding: 2em;
+    align-items: center;
+    label {
+      grid-column: 1;
+      grid-row: 1;
+      margin: 1em;
+    }
+    .slider {
+      grid-column: span 2;
+      grid-row: 2;
+    }
+    p {
+      grid-column: 2;
+      grid-row: 1;
+      margin: 1em;
+    }
+  }
 }

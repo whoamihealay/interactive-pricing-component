@@ -1,0 +1,114 @@
+/* ***** */
+/* VARS */
+/* ***** */
+
+/* #### COLORS #### */
+/* General */
+$clr-body-color: hsl(225, 20%, 60%); /* Main text color */
+$clr-body-bg: hsl(230, 100%, 99%); /* Main background */
+/* Primary */
+$clr-slider-bar: hsl(174, 77%, 80%);
+$clr-slider-bg: hsl(174, 86%, 45%);
+$clr-discount-bg: hsl(14, 92%, 95%);
+$clr-discount-text: hsl(15, 100%, 70%);
+$clr-cta-text: hsl(226, 100%, 87%);
+/* Neutral */
+$clr-price-comp-bg: hsl(0, 0%, 100%);
+$clr-empty-slider-bar: hsl(224, 65%, 95%);
+$clr-toggle-bg: hsl(223, 50%, 87%);
+$clr-text-cta-bg: hsl(227, 35%, 25%);
+
+/* Typography */
+$ff-sans-normal: "Manrope", sans-serif;
+$fs-900: 3rem;
+$fs-800: 2.25rem;
+$fs-700: 1.75rem;
+$fs-600: 1.5rem;
+$fs-500: 1.25rem;
+$fs-400: 1.125rem;
+$fs-300: 1rem;
+$fs-200: 0.938rem;
+/* utilities */
+$border-rad: 0.5rem;
+$line-height: 1.5;
+
+// #############  //
+// Utility classes
+// ############## //
+
+.container {
+  padding-inline: 1.5em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ###### */
+/* MIXINS */
+/* ###### */
+
+@mixin track() {
+  width: 100%;
+  height: 0.5rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: $clr-empty-slider-bar;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+@mixin progress {
+  height: 0.5rem;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  border-radius: 0.5rem;
+  background: $clr-slider-bar;
+}
+
+@mixin thumb {
+  box-shadow: none;
+  border: none;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  background: $clr-slider-bg url("../images/icon-slider.svg") no-repeat center;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  &::-webkit-slider-runnable-track {
+    @include track;
+  }
+  &::-moz-range-track {
+    @include track;
+  }
+  &::-ms-track {
+    @include track;
+  }
+  &::-moz-range-progress {
+    @include progress;
+  }
+  &::-webkit-slider-thumb {
+    @include thumb;
+    -webkit-appearance: none;
+    margin-top: -14px;
+  }
+  &::-moz-range-thumb {
+    @include thumb;
+  }
+  &::-ms-thumb {
+    @include thumb;
+  }
+}

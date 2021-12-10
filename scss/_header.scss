@@ -1,0 +1,24 @@
+/* ############ */
+/*    HEADER    */
+/* ############ */
+
+#header {
+  text-align: center;
+  padding-inline: 1em;
+  background-image: url("../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 5em 0;
+}
+
+#header h1 {
+  color: $clr-text-cta-bg;
+  font-size: clamp($fs-500, 3vw, $fs-700);
+  font-weight: 800;
+  padding: 0.5em;
+}
+
+#header p {
+  max-width: 13rem;
+  margin: auto;
+}

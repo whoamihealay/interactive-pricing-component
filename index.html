@@ -20,8 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="reset.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="container">
     <header id="header">
@@ -30,7 +30,8 @@
     </header>
     <main class="card">
       <div class="div-slider">
-        <label for="slider"> Pageviews</label><br />
+        <label for="slider"><span id="slider-views"></span> Pageviews</label
+        ><br />
         <input
           type="range"
           name="slider"
@@ -38,17 +39,19 @@
           class="slider"
           min="1"
           max="5"
-          value="3"
         />
-        <p>$ /month</p>
+        <p><span id="slider-money"></span> /month</p>
       </div>
       <div class="div-discount">
         <p>Monthly Billing</p>
-        <button id="toggle" class="btn-toggle" aria-label="Theme toggle button">
-          <span id="circle" class="circle"></span>
-        </button>
-        <p>Yearly Billing</p>
-        <p class="p-discount">-25%<span> discount</span></p>
+        <label class="btn-toggle">
+          <input id="toggle" type="checkbox" />
+          <span class="circle"></span>
+        </label>
+        <div class="div-yearly">
+          <p>Yearly Billing</p>
+          <p class="p-discount">-25%<span> discount</span></p>
+        </div>
       </div>
       <hr />
       <ul>

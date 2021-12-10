@@ -1,0 +1,19 @@
+/* Description */
+
+.card ul {
+  padding: 1em 0;
+}
+
+.card li {
+  list-style: url("../images/icon-check.svg") inside;
+}
+
+.cta {
+  background-color: $clr-text-cta-bg;
+  color: $clr-cta-text;
+  font-weight: 800;
+  border-radius: 1.5rem;
+  padding: 0.5em 3em;
+  margin: 1em;
+  cursor: pointer;
+}

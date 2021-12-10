@@ -1,0 +1,79 @@
+/* Discount */
+
+.div-discount {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  align-items: center;
+  padding: 1em 0.8em;
+}
+
+.div-discount p {
+  font-size: 0.875rem;
+}
+
+.p-discount span {
+  display: none;
+}
+
+.div-yearly {
+  position: relative;
+}
+
+.p-discount {
+  position: absolute;
+  bottom: 0;
+  right: -50%;
+  background-color: $clr-discount-bg;
+  color: $clr-discount-text;
+  font-size: 0.625rem;
+  padding: 0.125rem 0.8em;
+  border-radius: 0.5rem;
+}
+
+/* Discount toggle button */
+
+.discount {
+  $circle-pos: 5px;
+}
+.btn-toggle {
+  position: relative;
+  display: inline-block;
+  // background: $clr-toggle-bg;
+  width: 2.8rem;
+  height: 1.4rem;
+  // border-radius: 3rem;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .circle {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: $clr-toggle-bg;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 1rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      left: 0.2rem;
+      bottom: 0.2rem;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+  input:checked + .circle:before {
+    -webkit-transform: translateX(1.4rem);
+    -ms-transform: translateX(1.4rem);
+    transform: translateX(1.4rem);
+  }
+}
